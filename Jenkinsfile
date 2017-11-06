@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'echo $HOSTNAME' 
+                sh 'echo $USER' 
             }
         }
     }
 
     environment {
-    	HOSTNAME = credentials('hostname')
+    	USER = credentials('USER')
     }
 }
 
